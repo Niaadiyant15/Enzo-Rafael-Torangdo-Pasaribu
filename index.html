@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- KOMENTAR: Judul halaman web yang tampil di tab browser -->
+<title>Profil SMK Bina Informatika Bintaro</title>
+
+<style>
+/* ========================================================== */
+/* PENGATURAN TEMA WARNA WEBSITE                              */
+/* ========================================================== */
+:root {
+ --warna-header: #ffff77;      /* Warna latar judul & bagian header/footer */
+ --warna-teks-header: #000000; /* Warna tulisan di bagian header */
+ --warna-tombol: #ff4f9a;      /* Warna tombol aksi (CTA) */
+ --warna-latar: #7698d6;       /* Warna latar belakang halaman web */
+}
+
+/* ===== PENGATURAN DASAR TAMPILAN ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+ font-family: Arial, sans-serif;
+ background: var(--warna-latar);
+ color: #2b2b3a;
+ line-height: 1.6;
+}
+
+/* ===== HEADER (BAGIAN UTAMA PALING ATAS) ===== */
+header {
+ background: var(--warna-header);
+ color: var(--warna-teks-header);
+ text-align: center;
+ padding: 70px 20px 50px 20px;
+}
+
+/* PENGATURAN UKURAN & BENTUK LOGO SEKOLAH */
+.logo-sekolah {
+ width: 90px;
+ height: 90px;
+ object-fit: cover;
+ border-radius: 50%; /* Membuat foto menjadi bulat */
+ border: 3px solid white;
+ margin-bottom: 15px;
+}
+header h1 { font-size: 2.3rem; margin-bottom: 10px; }
+header p { font-size: 1.1rem; margin-bottom: 15px; }
+
+/* ===== TOMBOL AKSI (CTA BUTTON) ===== */
+.tombol {
+ display: inline-block;
+ background: var(--warna-tombol);
+ color: #ffffff;
+ padding: 12px 30px;
+ border-radius: 50px;
+ text-decoration: none;
+ font-weight: bold;
+ font-size: 1.1rem;
+}
+.tombol:hover { transform: scale(1.06); } /* Efek membesar saat kursor diarahkan */
+
+/* ===== PENGATURAN KOTAK / KONTAINER UTAMA ===== */
+.kontainer { max-width: 1000px; margin: 0 auto; padding: 45px 20px; }
+h2 {
+ color: var(--warna-header);
+ text-align: center;
+ font-size: 2rem;
+ margin-bottom: 25px;
+}
+.kartu {
+ background: #a0b3e5;
+ border-radius: 16px;
+ padding: 25px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Efek bayangan kotak */
+}
+.grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 20px;
+}
+.ekskul { text-align: center; font-weight: bold; font-size: 1.1rem; }
+.ekskul span { display: block; font-size: 2.2rem; margin-bottom: 6px; }
+
+/* ===== PENGATURAN GAMBAR / FOTO DI DALAM GRID ===== */
+.grid img {
+ width: 100%;
+ height: 180px;
+ object-fit: cover;
+ border-radius: 12px;
+ margin-bottom: 10px;
+}
+
+/* ===== KOTAK THUMBNAIL VIDEO DENGAN TOMBOL PLAY ===== */
+.video-thumbnail-container {
+ position: relative;
+ width: 100%;
+ max-width: 700px;
+ margin: 0 auto;
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.video-thumbnail-container img {
+ width: 100%;
+ height: auto;
+ display: block;
+}
+.overlay-play {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.35);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ transition: background 0.3s ease;
+ text-decoration: none;
+}
+.overlay-play:hover {
+ background: rgba(0, 0, 0, 0.5);
+}
+.ikon-play {
+ width: 75px;
+ height: 75px;
+ background: #ff0000;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: white;
+ font-size: 32px;
+ padding-left: 5px; /* Sedikit menggeser ikon segitiga agar pas di tengah */
+ box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+ transition: transform 0.3s ease;
+}
+.overlay-play:hover .ikon-play {
+ transform: scale(1.15);
+}
+.teks-play {
+ color: white;
+ font-weight: bold;
+ font-size: 1.1rem;
+ margin-top: 15px;
+ text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* ===== BAGIAN FOOTER (BAWAH HALAMAN) ===== */
+footer {
+ background: var(--warna-header);
+ color: var(--warna-teks-header);
+ text-align: center;
+ padding: 25px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 1: HEADER, LOGO, & IDENTITAS SEKOLAH                -->
+<!-- ========================================================== -->
+<header>
+ <!--
+   CARA MENGGANTI FOTO/LOGO DARI KOMPUTER LOKAL:
+   1. Simpan file gambar logo di folder yang SAMA dengan file HTML ini.
+   2. Ganti 'https://via.placeholder.com/150' dengan nama file logo Anda, misal: src="logo-bima.png"
+ -->
+ <img src="/Users/macbookairm1/Downloads/workshop/SMPN 14 TANGSEL/logo smp.jpeg" alt="Logo SMK Bina Informatika" class="logo-sekolah">
+  <h1>SMPN 14 TANGERANG SELATAN</h1>
+ <p>Cerdas, Empati, Religius, Inovatif, dan Aktif</p>
+ <p style="font-size: 0.95rem; opacity: 0.9;">📍 Jl. AMD 15/16 Graha Raya Bintaro Pondok Kacang Barat, Kec. Pondok Aren, Kota Tangerang Selatan, Prov. Banten.</p>
+  <br>
+ <a class="tombol" href="#profil">Jelajahi Profil</a>
+</header>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 2: TENTANG SEKOLAH, PROFIL, & VISI MISI            -->
+<!-- ========================================================== -->
+<div class="kontainer" id="profil">
+ <h2>Tentang Sekolah Kami</h2>
+ <div class="kartu">
+   <p><strong>Profil Singkat:</strong> UPTD SMP Negeri 14 Kota Tangerang Selatan adalah sekolah menengah pertama negeri yang berkomitmen menyelenggarakan pendidikan berkualitas untuk membentuk generasi yang berakhlak mulia, cerdas, ceria, dan unggul dalam prestasi.</p>
+   <br>
+   <p><strong>Visi Sekolah:</strong> Menjadi sekolah unggulan yang cerdas, empati, religius, inovatif, dan aktif (CERIA) dalam lingkungan yang kondusif.</p>
+   <br>
+   <p><strong>Misi Sekolah:</strong></p>
+   <ul style="margin-left: 20px; margin-top: 5px;">
+     <li>Menanamkan nilai-nilai religius dan adab melalui pembiasaan moral, etika, serta penanaman prinsip "adab dulu, ilmu mengikuti" dalam kehidupan sehari-hari di sekolah.</li>
+     <li>Mengembangkan potensi akademik dan kreativitas peserta didik yang cerdas, inovatif, serta aktif melalui kegiatan pembelajaran holistik maupun program pengembangan minat dan bakat.</li>
+     <li>Menciptakan lingkungan sekolah yang aman, nyaman, dan menyenangkan bagi seluruh warga sekolah untuk mendukung proses tumbuh kembang karakter siswa.</li>
+   </ul>
+ </div>
+</div>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 3: COVER VIDEO YOUTUBE DENGAN TOMBOL PLAY KUSTOM    -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Video Profil Sekolah</h2>
+ <div class="kartu">
+  
+   <!-- Tampilan Cover Depan Thumbnail Video YouTube Terlihat Jelas -->
+   <div class="video-thumbnail-container">
+     <!-- Gambar diambil otomatis dari thumbnail video YouTube -->
+     <img src="file:///C:/Users/LAB-TIK/Downloads/videoframe_434774.png" alt="Cover Video Profil SMPN 14 Tangerang Selatan">
+    
+     <!-- Tombol Play di atas gambar yang langsung mengarah ke video YouTube -->
+     <a href="https://www.youtube.com/watch?v=MZjVTh_52TY" target="_blank" class="overlay-play">
+       <div class="ikon-play">▶</div>
+       <div class="teks-play">▶ Cover Video Profil SMPN 14 Tangerang Selatan</div>
+     </a>
+   </div>
+
+   <p style="font-size: 0.9rem; color: #555; text-align: center; margin-top: 15px;">
+     Klik pada gambar di atas untuk menyaksikan video profil lengkap fasilitas dan kegiatan belajar di sekolah.
+   </p>
+
+ </div>
+</div>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 4: FOTO & INFORMASI EKSTRAKURIKULER                 -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Ekstrakurikuler Pilihan</h2>
+ <div class="grid">
+  
+   <!-- Ekskul 1 -->
+   <div class="kartu ekskul">
+     <img src="https://www.telkomsel.com/sites/default/files/2023-09/w4-39.png" alt="Foto Coding Club">
+     <span>🏐 </span> Voli
+     <p style="font-size: 0.9rem; font-weight: normal; color: #555; margin-top: 8px;">Menyalurkan bakat olahraga, kesehatan fisik, dan sportivitas tim.</p>
+   </div>
+
+   <!-- Ekskul 2 -->
+   <div class="kartu ekskul">
+     <img src="https://th.bing.com/th/id/OIP.phwuGnEOSMEDJnWyVQa7BwHaHH?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Foto Multimedia">
+     <span>✊</span> Pencak Silat
+     <p style="font-size: 0.9rem; font-weight: normal; color: #555; margin-top: 8px;">Jenis bela diri Indonesia yang saling berhubungan.</p>
+   </div>
+
+   <!-- Ekskul 3 -->
+   <div class="kartu ekskul">
+     <img src="https://smpn1sgs.sch.id/public/images/artikel/08-2017/28201707-700x700-pmr.jpg" alt="Foto Olahraga">
+     <span>❤️</span> PMR
+     <p style="font-size: 0.9rem; font-weight: normal; color: #555; margin-top: 8px;">Wadah pembinaan remaja di sekolah yang berfokus pada kepalangmerahan, kesehatan, pertolongan pertama, kesiapsiagaan, dan kepedulian sosial.</p>
+   </div>
+
+ </div>
+</div>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 5: FOTO & INFORMASI LOMBA / PRESTASI                -->
+<!-- ========================================================== -->
+<div class="kontainer">
+ <h2>Galeri Prestasi Sekolah</h2>
+ <div class="grid">
+  
+   <!-- Prestasi 1 -->
+   <div class="kartu">
+     <img src="https://th.bing.com/th/id/OIP.G0Bt_V0xF9Opo8q_HjmiTwHaE7?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Foto Lomba 1">
+     <h3 style="font-size: 1.1rem; color: var(--warna-header); margin-bottom: 5px;">🌟 Akreditasi A</h3>
+     <p style="font-size: 0.9rem; color: #555;">Kualitas pembelajaran yang baik, Tenaga pendidik profesional, Partisipasi aktif dalam program pemerintah.</p>
+   </div>
+
+   <!-- Prestasi 2 -->
+   <div class="kartu">
+     <img src="https://asrinews.com/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-09-at-16.32.34.jpeg" alt="Foto Lomba 2">
+     <h3 style="font-size: 1.1rem; color: var(--warna-header); margin-bottom: 5px;">🧑 Jumlah siswa besar (1200+ Siswa)</h3>
+     <p style="font-size: 0.9rem; color: #555;">Tingginya minat masyarakat menjadi salah satu indikator kepercayaan terhadap kualitas sekolah.</p>
+   </div>
+
+ </div>
+</div>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 6: FOOTER (BAGIAN BAWAH WEBSITE)                    -->
+<!-- ========================================================== -->
+<footer>
+ <p>&copy; 2026 SMK Bina Informatika Bintaro · Dibuat dengan ❤️ oleh: Enzo Rafael Torangdo Pasaribu</p>
+</footer>
+
+</body>
+</html>
