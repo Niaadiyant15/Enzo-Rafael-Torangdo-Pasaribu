@@ -199,27 +199,36 @@ footer {
 <!-- BAGIAN 3: COVER VIDEO YOUTUBE DENGAN TOMBOL PLAY KUSTOM    -->
 <!-- ========================================================== -->
 <div class="kontainer">
- <h2>Video Profil Sekolah</h2>
- <div class="kartu">
-  
-   <!-- Tampilan Cover Depan Thumbnail Video YouTube Terlihat Jelas -->
-   <div class="video-thumbnail-container">
-     <!-- Gambar diambil otomatis dari thumbnail video YouTube -->
-     <img src="file:///C:/Users/LAB-TIK/Downloads/videoframe_434774.png" alt="Cover Video Profil SMPN 14 Tangerang Selatan">
+  <h2>Video Profil Sekolah</h2>
+  <div class="kartu">
     
-     <!-- Tombol Play di atas gambar yang langsung mengarah ke video YouTube -->
-     <a href="https://www.youtube.com/watch?v=MZjVTh_52TY" target="_blank" class="overlay-play">
-       <div class="ikon-play">▶</div>
-       <div class="teks-play">▶ Cover Video Profil SMPN 14 Tangerang Selatan</div>
-     </a>
-   </div>
+    <!-- Tampilan Cover Depan Thumbnail Video YouTube Terlihat Jelas -->
+    <div class="video-thumbnail-container" style="position: relative; width: 100%; max-width: 700px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+      
+      <!-- 
+        == CARA UBAH THUMBNAIL (FOTO COVER) == 
+        Ganti tulisan 'MZjVTh_52TY' di bawah dengan ID video YouTube baru milik anak-anak.
+        (Contoh ID video dari link youtu.be/ABC123xyz, maka tulis ABC123xyz)
+      -->
+      <img src="https://img.youtube.com/vi/MZjVTh_52TY/hqdefault.jpg" alt="Cover Video Profil Sekolah" style="width: 100%; display: block;">
+      
+      <!-- 
+        == CARA UBAH LINK TOMBOL PLAY == 
+        Ganti link di dalam href="..." menjadi link YouTube lengkap anak-anak.
+      -->
+      <a href="https://youtu.be/MZjVTh_52TY?si=HGSVbcsCK6rIRssT" target="_blank" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none;">
+        <div style="width: 75px; height: 75px; background: #ff0000; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 32px; padding-left: 5px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">▶</div>
+        <div style="color: white; font-weight: bold; font-size: 1.1rem; margin-top: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.6);">▶ Tonton Video Profil Sekolah</div>
+      </a>
+    </div>
 
-   <p style="font-size: 0.9rem; color: #555; text-align: center; margin-top: 15px;">
-     Klik pada gambar di atas untuk menyaksikan video profil lengkap fasilitas dan kegiatan belajar di sekolah.
-   </p>
+    <p style="font-size: 0.9rem; color: #555; text-align: center; margin-top: 15px;">
+      Klik pada gambar di atas untuk menyaksikan video profil lengkap di YouTube.
+    </p>
 
- </div>
+  </div>
 </div>
+
 
 <!-- ========================================================== -->
 <!-- BAGIAN 4: FOTO & INFORMASI EKSTRAKURIKULER                 -->
